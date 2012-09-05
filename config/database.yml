@@ -23,3 +23,6 @@ production:
   encoding: utf8
   database: oauth_provider
   pool: 5
+  username: oauth_provider
+  password: oauth_provider
+  host: localhost
