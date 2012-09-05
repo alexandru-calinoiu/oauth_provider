@@ -1,6 +1,7 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
+require 'oauth/rack/oauth_filter'
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -20,7 +21,7 @@ module OauthProvider
 
     # Only load the plugins named here, in the order given (default is alphabetical).
     # :all can be used as a placeholder for all plugins not explicitly named.
-    # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
+     config.plugins = [ :exception_notification, :ssl_requirement, :all ]
 
     # Activate observers that should always be running.
     # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
@@ -58,6 +59,9 @@ module OauthProvider
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # using oauth
+    config.middleware.use OAuth::Rack::OAuthFilter
 
     # configure default generators
     config.generators do |g|
