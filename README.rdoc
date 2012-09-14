@@ -9,6 +9,3 @@ This is a small app used to fake out the getloded oauth service
 
 2. Start the app (specify the port)
        rails server -p 3001
-
-3. Create a user
-        navigate to http://localhost:3001/ and signup
