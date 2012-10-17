@@ -9,3 +9,7 @@ This is a small app used to fake out the getloded oauth service
 
 2. Start the app (specify the port)
        rails server -p 3001
+
+3. Update the truckingoffice/config/getloaded.rb
+        elsif Rails.env.development?
+          TruckingOffice::Application.config.getloaded_site = 'localhost:3001'
