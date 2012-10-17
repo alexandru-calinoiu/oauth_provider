@@ -12,4 +12,4 @@ This is a small app used to fake out the getloded oauth service
 
 3. Update the truckingoffice/config/getloaded.rb
         elsif Rails.env.development?
-          TruckingOffice::Application.config.getloaded_site = 'localhost:3001'
+          TruckingOffice::Application.config.getloaded_site = 'http://localhost:3001'
